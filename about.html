@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bizdogs LLC — About Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Biz<span>dogs</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="join.html" class="nav-cta">Join Us</a></li>
+  </ul>
+</nav>
+
+<section id="about" style="padding-top: 64px;">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">Business Students,<br>Built Different.</h2>
+        <div class="gold-line"></div>
+        <p>Bizdogs is the premier Living Learning Community for business-minded students at the University of Minnesota Duluth. We live together, learn together, and grow together — building a tight-knit network of future leaders right in the residence halls.</p>
+        <p>More than a club, we're a community. From networking events and guest speakers to study sessions and social events, Bizdogs gives you every advantage as you begin your business journey at UMD.</p>
+        <div class="about-values">
+          <div class="value-card">
+            <h4>Community</h4>
+            <p>Live alongside peers who share your goals and ambition.</p>
+          </div>
+          <div class="value-card">
+            <h4>Leadership</h4>
+            <p>Develop real skills through hands-on opportunities.</p>
+          </div>
+          <div class="value-card">
+            <h4>Network</h4>
+            <p>Connect with alumni, mentors, and industry professionals.</p>
+          </div>
+          <div class="value-card">
+            <h4>Success</h4>
+            <p>Academic support systems built into your daily life.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="about-card-stack">
+          <div class="about-card about-card-main">
+            <div class="big-text">LLC</div>
+            <div class="small-text">Living Learning Community</div>
+          </div>
+          <div class="about-card about-card-accent">
+            <div style="font-size:0.8rem; letter-spacing:0.12em; text-align:center; line-height:1.5">DULUTH<br>BULLDOGS<br>BUSINESS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo">Bizdogs<span>UMD Living Learning Community</span></a>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="join.html">Join</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© 2025 Bizdogs LLC · University of Minnesota Duluth</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
