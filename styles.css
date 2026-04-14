@@ -1211,6 +1211,53 @@ footer {
   margin-top: 0.1rem;
 }
 
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: var(--white);
+  padding: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.mobile-menu-toggle:hover {
+  opacity: 0.8;
+}
+
+/* ── TABLET ── */
+@media (max-width: 1024px) {
+  .section-inner {
+    padding: 5rem 2rem;
+  }
+
+  .about-grid, 
+  .past-events-layout,
+  .contact-grid,
+  .join-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .events-grid,
+  .testimonials-grid,
+  .why-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .hero-stats {
+    right: 2rem;
+    bottom: 4rem;
+    gap: 1.5rem;
+  }
+}
+
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   nav {
@@ -1218,7 +1265,33 @@ footer {
   }
 
   .nav-links {
-    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--maroon);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    /* Hidden by default */
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .nav-links.active-mobile {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 999;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
   }
 
   .section-inner {
@@ -1261,8 +1334,10 @@ footer {
   }
 
   .about-card-accent {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
+    right: -10px;
+    bottom: -10px;
   }
 
   .form-row {
