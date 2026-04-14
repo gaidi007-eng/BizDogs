@@ -1109,32 +1109,34 @@ footer {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(122, 0, 25, 0.06);
-  color: var(--maroon);
   transition: all 0.3s ease;
   margin-top: 1.25rem;
 }
 
 .leader-linkedin {
   margin-right: 0.4rem;
+  background: var(--maroon);
+  color: var(--white);
 }
 
 .leader-email {
   margin-left: 0.4rem;
+  background: var(--gold);
+  color: var(--maroon-dark);
 }
 
 .leader-linkedin:hover {
-  background: #0077b5;
+  background: var(--maroon-dark);
   color: var(--white);
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 119, 181, 0.25);
+  box-shadow: 0 6px 16px rgba(122, 0, 25, 0.3);
 }
 
 .leader-email:hover {
-  background: var(--maroon);
-  color: var(--white);
+  background: var(--gold-dark);
+  color: var(--maroon-dark);
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(122, 0, 25, 0.25);
+  box-shadow: 0 6px 16px rgba(255, 204, 51, 0.3);
 }
 
 /* ── TESTIMONIALS ── */
