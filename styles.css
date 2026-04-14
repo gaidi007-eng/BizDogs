@@ -1101,16 +1101,40 @@ footer {
   color: var(--maroon-dark);
 }
 
+.leader-linkedin,
+.leader-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(122, 0, 25, 0.06);
+  color: var(--maroon);
+  transition: all 0.3s ease;
+  margin-top: 1.25rem;
+}
+
 .leader-linkedin {
-  display: inline-block;
-  margin-top: 0.75rem;
-  color: rgba(122, 0, 25, 0.4);
-  transition: color 0.2s, transform 0.2s;
+  margin-right: 0.4rem;
+}
+
+.leader-email {
+  margin-left: 0.4rem;
 }
 
 .leader-linkedin:hover {
-  color: #0077b5;
-  transform: translateY(-2px);
+  background: #0077b5;
+  color: var(--white);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 119, 181, 0.25);
+}
+
+.leader-email:hover {
+  background: var(--maroon);
+  color: var(--white);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(122, 0, 25, 0.25);
 }
 
 /* ── TESTIMONIALS ── */
